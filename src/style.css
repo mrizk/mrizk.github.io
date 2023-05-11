@@ -1,0 +1,255 @@
+:root{
+    --primary-color: #121432;
+    --secondary-color: #fdf8ee;
+}
+
+@page {
+    margin: 0mm;
+}
+html {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0;
+    margin: auto;
+    display: table;
+}
+body{
+    min-width: 595px;
+    max-width: 1000px;
+    padding: 0;
+    margin: 0;
+    background: var(--primary-color);
+}
+.language {
+    float: right;
+    color: var(--secondary-color);
+}
+.language span {
+    cursor: pointer;
+}
+.header{
+    padding: 50px 0;
+}
+.header-infos{
+    display: grid;
+    grid-template-columns: auto 325px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "photo name"
+        "photo contact";
+    color: var(--secondary-color);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-infos a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.name{
+    grid-area: name;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.contact{
+    grid-area: contact;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+}
+.contact .data{
+    text-align: right;
+    margin-right: 5px;
+}
+.contact .address{
+    text-align: left;
+    margin-left: 5px;
+}
+.photo{
+    grid-area: photo;
+    margin-right: 15px;
+}
+.photo img {
+    width: 90px;
+    border-radius: 45px;
+    margin-top: 8px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "circletop circletop"
+        "experience experience2"
+        "experience education"
+        "experience technical"
+        "experience additional"
+        "circlebottom circlebottom"
+        "lastupdated lastupdated";
+    background: var(--secondary-color);
+    padding: 0 10px;
+}
+.experience{
+    grid-area: experience;
+}
+.experience2{
+    grid-area: experience2;
+}
+.education{
+    grid-area: education;
+}
+.education .section {
+    margin-bottom: 10px;
+}
+.technical{
+    grid-area: technical;
+}
+ul.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.additional{
+    grid-area: additional;
+}
+.last-updated {
+    grid-area: lastupdated;
+    margin-top: -15px;
+    text-align: right;
+}
+.last-updated span{
+    color: #d2c5ae;
+    font-weight: 300;
+    margin-right: -8px;
+}
+.additional .title{
+    padding-bottom: 0;
+}
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+.company {
+    margin-left: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 300;
+}
+.duration {
+    float: right;
+    font-weight: 300;
+    /* text-transform: lowercase; */
+}
+.timeframe {
+    float: right;
+}
+.column {
+    padding: 0px 20px;
+}
+.left {
+    border-right: 1px solid var(--primary-color);
+}
+.right {
+    border-left: 1px solid var(--primary-color);
+}
+.circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--primary-color);
+    margin: 10px auto;
+}
+.circle-top {
+    grid-area: circletop;
+    margin-bottom: 0;
+}
+.circle-bottom {
+    grid-area: circlebottom;
+    margin-top: 0;
+}
+.section .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+}
+.section .heading .logo {
+    width: fit-content;
+    margin-right: 5px;
+    background-color: white;
+}
+.section .heading .logo img {
+    height: 30px;
+    width: 30px;
+}
+.section .heading .labels {
+    width: 100%;
+}
+.section ul {
+    padding-left: 18px;
+    margin: 8px 0;
+    list-style: none;
+}
+.section ul li {
+    padding-bottom: 5px;
+}
+.section ul li::before{
+    content: "\26AC"; 
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 16px;
+    margin-left: -16px;
+}
+.section ul ul {
+    padding-left: 10px;
+}
+.section ul ul li {
+    padding-bottom: 2px;
+}
+.section a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.footer {
+    height: 60px;
+}
+
+@media print {
+    .resume {
+        width: 200mm;
+        height: 296mm;
+        margin: 0;
+    }
+    .resume {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .header {
+        padding: 10px;
+    }
+    .language {
+        display: none;
+    }
+    .content {
+        flex: 0 0 auto;
+    } 
+    .footer {
+        flex: 1 1 0;
+    }
+}

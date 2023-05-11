@@ -1,0 +1,305 @@
+<html>
+	<head>
+		<title>Al Moataz Rizk - Resume</title>
+		<base target="_blank">
+    	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="src/style.css" rel="stylesheet" />
+		<script>
+			const EN = {
+				"address": `
+					+49 176 56757060<br/>
+					Offenburg,<br/>
+					Germany`,
+				"experience.title": "Experience",
+				"experience.vioma.jobtitle": "Backend Developer",
+				"experience.vioma.company": "vioma GmbH",
+				"experience.vioma.duration": "6y",
+				"experience.vioma.location": "Offenburg, Germany",
+				"experience.vioma.timeframe": "May 2017 - Present",
+				"experience.vioma.details": `
+					<li>Lead a team of 2-4 developers to design, build, deploy and maintain vioma's APIs. This involved mentoring trainees, conducting code reviews and pair programming sessions, and stress testing other developers' work.</li>
+					<li>Implemented, certified, and maintained API connections to Booking.com, Expedia, HRS DS and Google to propagate pricing and availability data out from our systems, and receive bookings, modifications and cancellations from those Online Travel Agencies.</li>
+					<li>Helped migrate vioma from a fairly monolithic architecture to a deeply microservice-based architecture with currently well over 100 containers running online.</li>
+					<li>Created <i>datamanager</i> a part-ORM part-QueryBuilder Go project to allow for effortless communication with any form of persistent data storage solution (SQL database, ClickHouse warehouse, Key-Value store, etc).</li>
+					<li>Built a dashboard to allow hotels to view their most important statistics like booking volume, revenue, cancellations and average stay duration. <a href="https://www.vioma.de/de/systems/blog/release-65-wp169-124.html">Release 6.5 <i class="fa fa-external-link"></i></a> <a href="https://www.vioma.de/de/systems/blog/release-68--wp169-128.html">Release 6.8 <i class="fa fa-external-link"></i></a></li>
+					<li>Wrote an extensively detailed documentation of our APIs powered with Vuepress and custom VueJS components to render the meticulously documented nodes and attributes of every message in our API. <a href="https://cst-docs.viomassl.com/">Doc <i class="fa fa-external-link"></i></a></li>
+					<li>Wrote vioma's Release Playbook, a detailed internal document which allows any two developers to act as Release Managers for a given release and seamlessly guide and coordinate the release process.</li>
+					<li>Massively expanded our use of ElastAlerts to allow us to catch bugs and inconsistencies much quicker. Thus, reducing the total amount of support tickets we receive while our customer-base nearly doubled.</li>`,
+				"experience.musafir.jobtitle": "Junior Software Engineer",
+				"experience.musafir.company": "Musafir LLC",
+				"experience.musafir.duration": "3y 4m",
+				"experience.musafir.location": "Dubai, UAE",
+				"experience.musafir.timeframe": "Feb 2014 - May 2017",
+				"experience.musafir.details": `
+					<li>Worked on middleware and backend web application modules in ASP.NET for Musafir.com, an online travel agency.</li>
+					<li>Developed the ability to purchase services through the website (initially only flights and hotel bookings were purchasable) which allows for the sale of visa services, holiday packages, event tickets, etc.</li>
+					<li>Engineered a localization solution to allow the addition of Arabic to the website. The solution was developed to work with the existing architecture and be scalable to more languages.</li>
+					<li>Outstanding Innovation Award for outstanding Innovation Day project on Automated Testing during December 2016</li>`,
+				"experience.ixo.jobtitle": "Peer Advisor",
+				"experience.ixo.company": "IXO, AUS",
+				"experience.ixo.duration": "1y 9m",
+				"experience.ixo.location": "Sharjah, UAE",
+				"experience.ixo.timeframe": "May 2012 - Jan 2014",
+				"experience.ixo.details": `
+					<li>Designed and constructed an administrative database to store, organize, and process all incoming exchange students.</li>
+					<li>Processed incoming and outgoing exchange student applications.</li>
+					<li>ISEP Ambassador of the Year 20120-2013 for growing the student exchange program at AUS. <a href="https://www.aus.edu/media/news/aus-student-employees-named-isep-ambassadors-of-the-year">Article <i class="fa fa-external-link"></i></a></li>`,
+				"experience.cnn.jobtitle": "Freelancer",
+				"experience.cnn.company": "CNN Arabic",
+				"experience.cnn.duration": "6m",
+				"experience.cnn.location": "Dubai, UAE",
+				"experience.cnn.timeframe": "Aug 2011 - Jan 2012",
+				"experience.cnn.details": `
+					<li>Created a program to comb through the roughly 36,000 articles published on arabic.cnn.com and remove any/all Shutterstock images.</li>
+					<li>Researched adapting a Content Management System (CMS) for CNNArabic to assess the viability of switching to Wordpress or Drupal vs. modifying the existing (custom) CMS.</li>`,
+				"education.title": "Education",
+				"education.aus.title": "BSc. Computer Engineering",
+				"education.aus.name": "American University Of Sharjah, UAE",
+				"education.aus.timeframe": "Spring 2009 - Fall 2013",
+				"education.uvm.title": "Semester Abroad",
+				"education.uvm.name": "University of Vermont, USA",
+				"education.uvm.timeframe": "Jan 2012 - May 2012",
+				"technical.title": "Technical Skills",
+				"technical.excellent.title": "Excellent programming skills",
+				"technical.excellent.details": "Golang | Python | PHP | JavaScript | VueJS | Vuepress | CSS | Docker | SQL | HTML | C/C++ | RegEx",
+				"technical.basic.title": "Basic programming skills",
+				"technical.basic.details": "Ruby | Java | C#/ASP.Net",
+				"technical.comfortable.title": "Very comfortable using",
+				"technical.comfortable.details": "Gitlab | Git | Postman | Jira/Confluence | Visual Studio Code | Elasticsearch | Kibana | SVN",
+				"languages.title": "Languages",
+				"languages.details": `
+					<li>English - Fluent</li>
+					<li>German - B2/C1</li>
+					<li>Arabic - Fluent</li>`,
+				"other.title": "Other",
+				"other.details": `
+					<li>Permanent resident in Germany</li>
+					<li>DOB 21.04.1992</li>
+					<li>Avid boardgamer (BGG <a href="https://boardgamegeek.com/user/mrizk">@mrizk</a>), organized weekly gamenights in the office after work.</li>
+					<li>Hugely enjoy camping, going on hikes and exploring the Black Forest.</li>`,
+				"lastupdated": "Last updated May 2023",
+			}
+			const DE = {
+				"address": `
+					+49 176 56757060<br/>
+					Offenburg,<br/>
+					Deutschland`,
+				"experience.title": "Berufserfahrung",
+				"experience.vioma.jobtitle": "Backend Entwickler",
+				"experience.vioma.company": "vioma GmbH",
+				"experience.vioma.duration": "6j",
+				"experience.vioma.location": "Offenburg, Deutschland",
+				"experience.vioma.timeframe": "Mai 2017 - heute",
+				"experience.vioma.details": `
+					<li>Lead a team of 2-4 developers to design, build, deploy and maintain vioma's APIs. This involved mentoring trainees, conducting code reviews and pair programming sessions, and stress testing other developers' work.</li>
+					<li>Implemented, certified, and maintained API connections to Booking.com, Expedia, HRS DS and Google to propagate pricing and availability data out from our systems, and receive bookings, modifications and cancellations from those Online Travel Agencies.</li>
+					<li>Helped migrate vioma from a fairly monolithic architecture to a deeply microservice-based architecture with currently well over 100 containers running online.</li>
+					<li>Created <i>datamanager</i> a part-ORM part-QueryBuilder Go project to allow for effortless communication with any form of persistent data storage solution (SQL database, ClickHouse warehouse, Key-Value store, etc).</li>
+					<li>Built a dashboard to allow hotels to view their most important statistics like booking volume, revenue, cancellations and average stay duration. <a href="https://www.vioma.de/de/systems/blog/release-65-wp169-124.html">Release 6.5 <i class="fa fa-external-link"></i></a> <a href="https://www.vioma.de/de/systems/blog/release-68--wp169-128.html">Release 6.8 <i class="fa fa-external-link"></i></a></li>
+					<li>Wrote an extensively detailed documentation of our APIs powered with Vuepress and custom VueJS components to render the meticulously documented nodes and attributes of every message in our API. <a href="https://cst-docs.viomassl.com/">Doc <i class="fa fa-external-link"></i></a></li>
+					<li>Wrote vioma's Release Playbook, a detailed internal document which allows any two developers to act as Release Managers for a given release and seamlessly guide and coordinate the release process.</li>
+					<li>Massively expanded our use of ElastAlerts to allow us to catch bugs and inconsistencies much quicker. Thus, reducing the total amount of support tickets we receive while our customer-base nearly doubled.</li>`,
+				"experience.musafir.jobtitle": "Junior Software Ingenieur",
+				"experience.musafir.company": "Musafir LLC",
+				"experience.musafir.duration": "3j 4m",
+				"experience.musafir.location": "Dubai, VAE",
+				"experience.musafir.timeframe": "Feb 2014 - Mai 2017",
+				"experience.musafir.details": `
+					<li>Worked on middleware and backend web application modules in ASP.NET for Musafir.com, an online travel agency.</li>
+					<li>Developed the ability to purchase services through the website (initially only flights and hotel bookings were purchasable) which allows for the sale of visa services, holiday packages, event tickets, etc.</li>
+					<li>Engineered a localization solution to allow the addition of Arabic to the website. The solution was developed to work with the existing architecture and be scalable to more languages.</li>
+					<li>Outstanding Innovation Award for outstanding Innovation Day project on Automated Testing during December 2016</li>`,
+				"experience.ixo.jobtitle": "Peer Advisor",
+				"experience.ixo.company": "IXO, AUS",
+				"experience.ixo.duration": "1j 9m",
+				"experience.ixo.location": "Sharjah, VAE",
+				"experience.ixo.timeframe": "Mai 2012 - Jan 2014",
+				"experience.ixo.details": `
+					<li>Designed and constructed an administrative database to store, organize, and process all incoming exchange students.</li>
+					<li>Processed incoming and outgoing exchange student applications.</li>
+					<li>ISEP Ambassador of the Year 20120-2013 for growing the student exchange program at AUS. <a href="https://www.aus.edu/media/news/aus-student-employees-named-isep-ambassadors-of-the-year">Article <i class="fa fa-external-link"></i></a></li>`,
+				"experience.cnn.jobtitle": "Freelancer",
+				"experience.cnn.company": "CNN Arabic",
+				"experience.cnn.duration": "6m",
+				"experience.cnn.location": "Dubai, VAE",
+				"experience.cnn.timeframe": "Aug 2011 - Jan 2012",
+				"experience.cnn.details": `
+					<li>Created a program to comb through the roughly 36,000 articles published on arabic.cnn.com and remove any/all Shutterstock images.</li>
+					<li>Researched adapting a Content Management System (CMS) for CNNArabic to assess the viability of switching to Wordpress or Drupal vs. modifying the existing (custom) CMS.</li>`,
+				"education.title": "Studium",
+				"education.aus.title": "BSc. Computer Engineering",
+				"education.aus.name": "American University Of Sharjah, VAE",
+				"education.aus.timeframe": "Jan 2009 - Dez 2013",
+				"education.uvm.title": "Semester im Ausland",
+				"education.uvm.name": "University of Vermont, USA",
+				"education.uvm.timeframe": "Jan 2012 - Mai 2012",
+				"technical.title": "Technische Kenntnisse",
+				"technical.excellent.title": "Ausgezeichnete Programmierkenntnisse",
+				"technical.excellent.details": "Golang | Python | PHP | JavaScript | VueJS | Vuepress | CSS | Docker | SQL | HTML | C/C++ | RegEx",
+				"technical.basic.title": "Gute Programmierkenntnisse",
+				"technical.basic.details": "Ruby | Java | C#/ASP.Net",
+				"technical.comfortable.title": "Starke Erfahrung",
+				"technical.comfortable.details": "Gitlab | Git | Postman | Jira/Confluence | Visual Studio Code | Elasticsearch | Kibana | SVN",
+				"languages.title": "Sprachkenntnisse",
+				"languages.details": `
+					<li>English - Fließend</li>
+					<li>German - B2/C1</li>
+					<li>Arabic - Fließend</li>`,
+				"other.title": "Zusätzlich",
+				"other.details": `
+					<li>Niederlassungserlaubnis in Deutschland</li>
+					<li>Geburtsdatum 21.04.1992</li>
+					<li>Leidenschaftlicher Brettspieler (BGG <a href="https://boardgamegeek.com/user/mrizk">@mrizk</a>), organisierte wöchentliche Spieleabende im Büro nach der Arbeit.</li>
+					<li>Campen, Wandern und Erkunden des Schwarzwalds machen mir großen Spaß.</li>`,
+				"lastupdated": "Zuletzt aktualisiert im Mai 2023",
+			}
+			function translate(lang) {
+				if (lang === undefined) { // read from storage
+					lang = localStorage.getItem("lang");
+				}
+				if (lang === undefined) { // fallback to en
+					lang = 'en';
+				}
+				localStorage.setItem("lang", lang);
+				document.querySelectorAll('[id]').forEach((element) => {
+					if (element.id !== "") {
+						switch (lang) {
+							case 'de':
+								element.innerHTML = DE[element.id];
+								break;
+							default:
+								element.innerHTML = EN[element.id];
+								break;
+						}
+					}
+				})
+			}
+			function setLanguage(lang) { // why!? 🤷‍♂️
+				translate(lang);
+			}
+		</script>
+	</head>
+	<body onload="translate()">
+		<div class="language">
+			<span onclick="setLanguage('en')">EN</span> | <span onclick="setLanguage('de')">DE</span>
+		</div>
+		<div class="resume">
+			<div class="header">
+				<div class="header-infos">
+					<div class="photo">
+						<img src="./img/Profile_Photo.jpg" alt="Profile Photo">
+					</div>
+					<div class="name">
+						Al Moataz Rizk
+					</div>
+					<div class="contact">
+						<div class="data">
+							almoataz.rizk@gmail.com<br/>
+							<a href="https://www.linkedin.com/in/almori/">linkedin.com/in/almori</a><br/>
+							<a href="https://github.com/mrizk">github.com/mrizk</a>
+						</div>
+						<div id="address" class="address"></div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="circle circle-top"></div>
+				<div class="experience column left">
+					<div id="experience.title" class="title"></div>
+					<div class="section">
+						<div class="heading">
+							<div class="logo">
+								<a href="https://www.vioma.de"><img src="./img/Vioma_Logo.jpeg" alt="Vioma Logo"></a>
+							</div>
+							<div class="labels">
+								<span id="experience.vioma.jobtitle" class="subtitle"></span><a id="experience.vioma.company" class="company" href="https://www.vioma.de"></a><span id="experience.vioma.duration" class="duration"></span><br/>
+								<span id="experience.vioma.location" class="location"></span><span id="experience.vioma.timeframe" class="timeframe"></span>
+							</div>
+						</div>
+						<ul id="experience.vioma.details"></ul>
+					</div>
+					<div class="section">
+						<div class="heading">
+							<div class="logo">
+								<a href="https://www.musafir.com"><img src="./img/Musafir_Logo.jpeg" alt="Musafir Logo"></a>
+							</div>
+							<div class="labels">
+								<span id="experience.musafir.jobtitle" class="subtitle"></span><a id="experience.musafir.company" class="company" href="https://www.musafir.com"></a><span id="experience.musafir.duration" class="duration"></span><br/>
+								<span id="experience.musafir.location" class="location"></span><span id="experience.musafir.timeframe" class="timeframe"></span>
+							</div>
+						</div>
+						<ul id="experience.musafir.details"></ul>
+					</div>
+				</div>
+				<div class="experience2 column right">
+					<div class="section">
+						<div class="heading">
+							<div class="logo">
+								<a href="https://www.aus.edu/ixo"><img src="./img/AUS_Emblem.png" alt="AUS Logo"></a>
+							</div>
+							<div class="labels">
+								<span id="experience.ixo.jobtitle" class="subtitle"></span><a id="experience.ixo.company" class="company" href="https://www.aus.edu/ixo"></a><span id="experience.ixo.duration" class="duration"></span><br/>
+								<span id="experience.ixo.location" class="location"></span><span id="experience.ixo.timeframe" class="timeframe"></span>
+							</div>
+						</div>
+						<ul id="experience.ixo.details"></ul>
+					</div>
+					<div class="section">
+						<div class="heading">
+							<div class="logo">
+								<a href="https://arabic.cnn.com/"><img src="./img/CNN_Logo.jpeg" alt="CNN Logo"></a>
+							</div>
+							<div class="labels">
+								<span id="experience.cnn.jobtitle" class="subtitle"></span><a id="experience.cnn.company" class="company" href="https://arabic.cnn.com/"></a><span id="experience.cnn.duration" class="duration"></span><br/>
+								<span id="experience.cnn.location" class="location"></span><span id="experience.cnn.timeframe" class="timeframe"></span>
+							</div>
+						</div>
+						<ul id="experience.cnn.details"></ul>
+					</div>
+				</div>
+				<div class="education column right">
+					<div id="education.title" class="title"></div>
+					<div class="section">
+						<span id="education.aus.title" class="subtitle"></span><br/>
+						<span id="education.aus.name" class="location"></span><span id="education.aus.timeframe" class="timeframe"></span>
+					</div>
+					<div class="section">
+						<span id="education.uvm.title" class="subtitle"></span><br/>
+						<span id="education.uvm.name" class="location"></span><span id="education.uvm.timeframe" class="timeframe"></span>
+					</div>
+				</div>
+				<div class="technical column right">
+					<div id="technical.title" class="title"></div>
+					<div class="section">
+						<span id="technical.excellent.title" class="subtitle"></span>
+						<ul class="skills">
+							<li id="technical.excellent.details"></li>
+						</ul>
+						<span id="technical.basic.title" class="subtitle"></span>
+						<ul class="skills">
+							<li id="technical.basic.details"></li>
+						</ul>
+						<span id="technical.comfortable.title" class="subtitle"></span>
+						<ul class="skills">
+							<li id="technical.comfortable.details"></li>
+						</ul>
+						<span id="languages.title" class="subtitle"></span>
+						<ul id="languages.details" class="skills"></ul>
+					</div>
+				</div>
+				<div class="additional column right">
+					<div id="other.title" class="title"></div>
+					<div class="section">
+						<ul id="other.details"></ul>
+					</div>
+				</div>
+				<div class="circle circle-bottom"></div>
+				<div class="last-updated">
+					<span id="lastupdated"></span>
+				</div>
+			</div>
+			<div class="footer"></div>
+		</body>
+	</div>
+</html>
