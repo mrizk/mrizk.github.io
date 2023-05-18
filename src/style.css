@@ -22,8 +22,9 @@ body{
     background: var(--primary-color);
 }
 .language {
-    float: right;
     color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 40px;
 }
 .language span {
     cursor: pointer;
@@ -79,9 +80,11 @@ body{
 }
 
 .content{
+    height: 996px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
+    grid-template-rows: min-content auto auto auto auto min-content min-content;
+    align-self: stretch;
     grid-template-areas: 
         "circletop circletop"
         "experience experience2"
@@ -91,7 +94,6 @@ body{
         "circlebottom circlebottom"
         "lastupdated lastupdated";
     background: var(--secondary-color);
-    padding: 0 10px;
 }
 .experience{
     grid-area: experience;
@@ -125,7 +127,7 @@ ul.skills {
 .last-updated span{
     color: #d2c5ae;
     font-weight: 300;
-    margin-right: -8px;
+    margin-right: 2px;
 }
 .additional .title{
     padding-bottom: 0;
@@ -171,7 +173,7 @@ ul.skills {
     width: 15px;
     height: 15px;
     border: 2px solid var(--primary-color);
-    margin: 10px auto;
+    margin: 5px auto;
 }
 .circle-top {
     grid-area: circletop;
@@ -231,7 +233,7 @@ ul.skills {
 
 @media print {
     .resume {
-        width: 200mm;
+        width: 206mm;
         height: 296mm;
         margin: 0;
     }
